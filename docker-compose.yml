@@ -47,3 +47,4 @@ networks:
 
 volumes:
   postgres_nodejs_data:
+  webroot:
