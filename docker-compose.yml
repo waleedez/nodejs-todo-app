@@ -12,10 +12,13 @@ services:
       - "5050:3000"
     networks:
       - todo-app-network
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres:17-alpine
     container_name: postgres-db
+    restart: unless-stopped
     environment:
       POSTGRES_DB: nestjs_db
       POSTGRES_USER: nestjs_user
@@ -30,6 +33,7 @@ services:
   nginx:
     image: nginx:alpine
     container_name: nginx-proxy
+    restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
