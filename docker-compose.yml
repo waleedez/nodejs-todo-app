@@ -55,7 +55,7 @@ services:
       - webroot:/var/www/html
     depends_on:
       - nginx
-    command: certonly --webroot --webroot-path=/var/www/html --email waleedez@gmail.com --agree-tos --no-eff-email --non-interactive --keep-until-expiring -d waleedez2.ddns.net
+    command: certonly --webroot --webroot-path=/var/www/html --email waleedez@gmail.com --agree-tos --no-eff-email --non-interactive --keep-until-expiring -d waleedez3.ddns.net
 
 networks:
   todo-app-network:
